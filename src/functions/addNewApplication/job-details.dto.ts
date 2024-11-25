@@ -13,7 +13,7 @@ export class JobDetailsDTO {
 
   @IsOptional()
   @IsDateString()
-  postingDate?: string;
+  datePosted?: string;
 
   @IsOptional()
   @IsEmail()
@@ -34,5 +34,4 @@ export class JobDetailsDTO {
   @IsOptional()
   @IsBoolean()
   remote?: boolean;
-  datePosted: string;
 }

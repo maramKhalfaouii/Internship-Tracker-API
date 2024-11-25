@@ -11,7 +11,7 @@ export class ManualJobDetailsExtractor {
 
     const companyName = await this.promptUser("Company Name");
     const description = await this.promptUser("Job Description");
-    const postingDate = await this.promptUser("Posting Date (YYYY-MM-DD, optional)", true);
+    const datePosted = await this.promptUser("Posting Date (YYYY-MM-DD, optional)", true);
     const deadline = await this.promptUser("Application Deadline (YYYY-MM-DD, optional)", true);
     const city = await this.promptUser("City (optional)", true);
     const remoteInput = await this.promptUser("Is the job remote? (yes/no)", true);
@@ -22,7 +22,7 @@ export class ManualJobDetailsExtractor {
     return {
       companyName: companyName || "Unknown Company",
       description: description || "No description provided.",
-      postingDate: postingDate || undefined,
+      datePosted: datePosted || undefined,
       deadline: deadline || undefined,
       link,
       city: city || undefined,

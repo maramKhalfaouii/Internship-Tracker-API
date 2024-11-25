@@ -34,7 +34,7 @@ export class DiffbotService {
       // Extract relevant information
       const jobDetails: JobDetailsDTO = {
         companyName: jobData.objects?.[0]?.employer?.name || "Not specified", 
-        postingDate: jobData.datePosted || "Not specified",
+        datePosted: jobData.datePosted || "Not specified",
         deadline: jobData.deadline || "Not specified", 
         link, 
         description: jobData.objects?.[0]?.text || "Not specified", 
