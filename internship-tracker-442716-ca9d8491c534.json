@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "internship-tracker-442716",
+  "private_key_id": "ca9d8491c53431c15ccdd35621fd6cad5d353469",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCk2flQT0lRvMqb\nmAyGVtktDLZz2WEPjyiTQkO+rsURoynIKNSbTyFxSCbGumEvabXvOUtxyjNZLPPb\nUTBAAskXg2XGvsob3pNK11e9Z+uFHIzuWBXZGCv6xCdTzrliP0jrjb4ZBEDOjdlH\nE/nKX7fxOrKaIEuGut0Sp1B9PHlNe7xcSpddgAH7FmgWl83vJ9Spsr6QYwNv/Oe9\niJRSVywVu0zLHdVEU79xp/HF2t+aXOcp7BKlZiv8+g/rddTvVeRM/ZxAvh2xW59d\nnDoBXULpV8rTy126UhB8DiQPJ4MhFGY0VrkEgKxpyqZhci63FHMmG5ikr69fHTeS\nfWb6m2nDAgMBAAECggEAKcK2L6wGLNigks3vzlBN7+Wairp0phZj9voAY1uuvIsS\n2IvPYBCpriLS/+DTIcmrtxBSll7cpyiGFfb5PB34hyZYMALA/FJkCb+HkIm01iGn\nafGSh05iRcJPHCHwQH07ocBkeb3kFO9GLYVX7/ZTiJ6QBA9OUrEfs8wCzdb1+7SF\n+CtAA8n1ZWOYI0Y6dR0gQJOVk4X4WjlGabc/Rn6jaErORUB7CVqDMTHWXKZ/dX83\niuW5AYLlvw/PkOMRIJi0KTRdOTCID74yFpJU3l3aFzAxcuLSIzMFOc1LWBcOr3rT\ni55v/lNnR4ws1YXXOxv8kbNcmUnZPkAe/PtBFiRiUQKBgQDmt3O1vxohzcQpx5u4\nCQLD8I5Mju1GFy1UdRKKZeCKfKIjfexmrpmkxt+tF+C/16jMv4Shs2v1M6+Y+qDk\nsCx2+nCtWbjkIj3v6D/1hE0oIV27w42bEO72JOPxpc8stWGlVoOmcwJrPuFXS4lA\nuKb8BXDrWqIekso2fI1lxjdCXQKBgQC26rvstHrERvbvOOXasm7f2NE07RT3egfo\n2Qrq117TFNLee8+ijWBaM4pReHT80b4r9i5EFdhs2U2xbs1SIxHKzINlrD5pwdfd\n8+t+23O1rDd7S0OijqmA1r2P3XskwrRXW29ICFPjD6hS6hOJ18RIsBpfn/8ILUs+\nkB7ZXn7anwKBgQDXINYm8QN347r2ziYYC2blt0eogVkjkvb0mploLSibWS2CdKda\n85FWQQ5OA0bQ+1FtYWNVt8yBfelNdt1RgChl5I3uRgwNxRQFwITq9KtRMROKwgQn\nRDndkHZvW5F7ecGL/siRCwqFX8OUt11K2SLzOkuZWRBz+6HL/oWGEbZzDQKBgFf/\nu+MXvMw6u8fA3swE9dRZMeS9fk3E9pMt/9OVQ3hXV09Tz0OLsmQS0aN6SQXsPgpW\nSFHXFKThMkB/ZuXyGzguhbRfVjN430pXc9824obvUE3Pmr1U1vU12kKhMgIwbaRt\nR68m2nytZrRlCntRQ4wYtMd2aLJdYAq8OSsoC+1PAoGBAMXRen25WdpTOex8A4c8\nyWRg9plwKSUJrKmLmRPo1An1ktbrrk47EpZhTDeDnaNavhUSWXf7h/meIu/AB+qo\n/B12pOlqiN0povX3OoifavtiYOQD2LaF0aATRSVWmiGvPCMi09jfVOvuMsWD62AC\nagBqJRJtACcHeGLsUx3sZnjM\n-----END PRIVATE KEY-----\n",
+  "client_email": "maram222@internship-tracker-442716.iam.gserviceaccount.com",
+  "client_id": "115106084605810516955",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/maram222%40internship-tracker-442716.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

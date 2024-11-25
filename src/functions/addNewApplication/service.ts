@@ -2,6 +2,7 @@ import { DiffbotService } from "./../../shared/diffbot.service";
 import { ManualJobDetailsExtractor } from "./add-application-manually";
 import { JobDetailsDTO } from "./job-details.dto";
 import { HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
+import { GoogleSheetsService } from '../../shared/GoogleSheetsService'; 
 
 interface AddApplicationRequest {
   link: string;
@@ -28,6 +29,7 @@ export class JobApplicationService {
   
       const diffbotService = new DiffbotService();
       const manualExtractor = new ManualJobDetailsExtractor();
+      const googleSheetsService = new GoogleSheetsService(); // Initialize the GoogleSheetsService
   
       // Declare jobDetails to use across the function
       let jobDetails: JobDetailsDTO;
@@ -50,13 +52,34 @@ export class JobApplicationService {
         jobDetails = await manualExtractor.manuallyEnterJobDetails(link);
       }
   
+      // Save job details to Google Sheets
+      try {
+        context.log("Saving job details to Google Sheets...");
+        await googleSheetsService.saveApplication({
+          companyName: jobDetails.companyName || "Unknown",
+          email: jobDetails.email || "N/A",
+          deadline: jobDetails.deadline || "N/A",
+          description: jobDetails.description || "N/A",
+          link: link,
+          skills: jobDetails.skills?.join(", ") || "N/A",
+          city: jobDetails.city || "N/A",
+          remote: jobDetails.remote ? "Yes" : "No",
+        });
+        context.log("Job details saved successfully to Google Sheets.");
+      } catch (error) {
+        context.log(`Failed to save job details to Google Sheets: ${error.message}`);
+        return {
+          status: 500,
+          body: "Failed to save job details to Google Sheets.",
+        };
+      }
+  
       return {
         status: 200,
         body: JSON.stringify({
-          message: "Job application processed successfully.",
+          message: "Job application processed successfully and saved to Google Sheets.",
           jobDetails,
         }),
       };
     }
   }
-  

@@ -14,6 +14,8 @@ export class DiffbotService {
   async fetchJobDetails(link: string): Promise<any> {
     const apiUrl = `https://api.diffbot.com/v3/job`;
     try {
+
+      console.log('Before Google Sheets operation');
       const response = await axios.get(apiUrl, {
         params: {
           url: link,
@@ -31,14 +33,14 @@ export class DiffbotService {
 
       // Extract relevant information
       const jobDetails: JobDetailsDTO = {
-        companyName: jobData.objects?.[0]?.employer?.name || "Not specified", // Extract employer name
-        postingDate: jobData.datePosted || "Not specified", // Extract posting date
-        deadline: jobData.deadline || "Not specified", // Provide deadline if available
-        link, // Use the passed job link
-        description: jobData.objects?.[0]?.text || "Not specified", // Extract description from objects
-        skills: jobData.objects?.[0]?.skills?.map(skill => skill.skill) || [], // Map skills to an array of strings
-        city: jobData.objects?.[0]?.locations?.[0]?.city?.name || "Not specified", // Extract city from locations
-        remote: jobData.objects?.[0]?.remote || "Not specified", // Extract remote work info
+        companyName: jobData.objects?.[0]?.employer?.name || "Not specified", 
+        postingDate: jobData.datePosted || "Not specified",
+        deadline: jobData.deadline || "Not specified", 
+        link, 
+        description: jobData.objects?.[0]?.text || "Not specified", 
+        skills: jobData.objects?.[0]?.skills?.map(skill => skill.skill) || [], 
+        city: jobData.objects?.[0]?.locations?.[0]?.city?.name || "Not specified", 
+        remote: jobData.objects?.[0]?.remote || "Not specified", 
       };
 
       return jobDetails;
