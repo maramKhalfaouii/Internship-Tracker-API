@@ -34,4 +34,5 @@ export class JobDetailsDTO {
   @IsOptional()
   @IsBoolean()
   remote?: boolean;
+  datePosted: string;
 }

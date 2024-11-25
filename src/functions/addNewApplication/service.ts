@@ -64,6 +64,7 @@ export class JobApplicationService {
           skills: jobDetails.skills?.join(", ") || "N/A",
           city: jobDetails.city || "N/A",
           remote: jobDetails.remote ? "Yes" : "No",
+          datePosted: jobDetails.datePosted || "N/A",
         });
         context.log("Job details saved successfully to Google Sheets.");
       } catch (error) {

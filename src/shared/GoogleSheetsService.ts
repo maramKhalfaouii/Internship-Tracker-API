@@ -60,6 +60,7 @@ export class GoogleSheetsService {
           application.skills,
           application.city,
           application.remote,
+          application.datePosted,
         ],
       ];
 
